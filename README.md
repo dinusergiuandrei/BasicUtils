@@ -1,5 +1,5 @@
 # BasicUtils
-Multiple simplifying wrappers over overly-complex basic operations.
+Multiple simplifying wrappers over over-complex basic operations.
 
 [v] Cfg (parser and generator)  
 [v] Charts (wrapper over jfreechart)  
