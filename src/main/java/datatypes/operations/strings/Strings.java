@@ -1,4 +1,4 @@
-package datatypes;
+package datatypes.operations.strings;
 
 import java.util.ArrayList;
 import java.util.Arrays;

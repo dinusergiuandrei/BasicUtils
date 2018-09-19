@@ -1,6 +1,6 @@
 package cfg.parser;
 
-import datatypes.Strings;
+import datatypes.operations.strings.Strings;
 import filemanager.FileManager;
 import javafx.util.Pair;
 
