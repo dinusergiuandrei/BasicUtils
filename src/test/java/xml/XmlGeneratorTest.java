@@ -1,17 +1,18 @@
 package xml;
 
-import datatypes.structure.trees.detailed.DetailedTree;
-import datatypes.structure.trees.detailed.DetailedTreeNode;
+import datatypes.structure.trees.basic.BasicTree;
+import datatypes.structure.trees.basic.BasicTreeNode;
 import org.junit.Before;
 import org.junit.Test;
 import xml.generator.XmlGenerator;
+import xml.tree.XmlTreeNodeData;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 
 public class XmlGeneratorTest {
 
-    private DetailedTree tree;
+    private BasicTree tree;
 
     private String path;
 
@@ -21,19 +22,26 @@ public class XmlGeneratorTest {
     public void setUp(){
         path = "testdata/xml/xmltest1.xml";
         xmlGenerator = new XmlGenerator();
-        tree = new DetailedTree();
-        DetailedTreeNode root = new DetailedTreeNode<>("Myroot", "aroot", null);
-        DetailedTreeNode node1 = new DetailedTreeNode<>("node1", "data1", root);
-        DetailedTreeNode node2 = new DetailedTreeNode<>("node2", "data2", node1);
-        DetailedTreeNode node3 = new DetailedTreeNode<>("node3", "data3", node1);
-        DetailedTreeNode node4 = new DetailedTreeNode<>("node4", "data4", root);
+        tree = new BasicTree();
 
-        root.addAttribute("isRoot", "true");
-        node1.addAttribute("abc", 213);
-        node1.addAttribute("abc", "3424");
-        node3.addAttribute("sadaf", "afce3qdedad");
+        XmlTreeNodeData rootData = new XmlTreeNodeData("root");
+        XmlTreeNodeData nodeData1 = new XmlTreeNodeData("node1");
+        XmlTreeNodeData nodeData2 = new XmlTreeNodeData("node2");
+        XmlTreeNodeData nodeData3 = new XmlTreeNodeData("node3");
+        XmlTreeNodeData nodeData4 = new XmlTreeNodeData("node4");
+        rootData.addAttribute("isRoot", "true");
+        nodeData1.addAttribute("abc", 213);
+        nodeData2.addAttribute("abc", "3424");
+        nodeData3.addAttribute("sadaf", "afce3qdedad");
+        nodeData3.addAttribute("noway", ".");
 
-        tree.addNode(root);
+        BasicTreeNode<XmlTreeNodeData> root = new BasicTreeNode<>(rootData, null);
+        BasicTreeNode<XmlTreeNodeData> node1 = new BasicTreeNode<>(nodeData1, root);
+        BasicTreeNode<XmlTreeNodeData> node2 = new BasicTreeNode<>(nodeData2, node1);
+        BasicTreeNode<XmlTreeNodeData> node3 = new BasicTreeNode<>(nodeData3, node1);
+        BasicTreeNode<XmlTreeNodeData> node4 = new BasicTreeNode<>(nodeData4, root);
+
+        tree.addRoot(root);
         tree.addNode(node1);
         tree.addNode(node2);
         tree.addNode(node3);

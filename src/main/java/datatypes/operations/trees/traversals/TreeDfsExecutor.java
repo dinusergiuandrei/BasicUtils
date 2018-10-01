@@ -1,4 +1,4 @@
-package datatypes.operations.trees;
+package datatypes.operations.trees.traversals;
 
 import datatypes.operations.trees.visitors.TreeNodeVisitor;
 import datatypes.structure.trees.basic.BasicTreeNode;

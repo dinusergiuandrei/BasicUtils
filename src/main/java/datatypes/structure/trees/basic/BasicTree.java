@@ -1,16 +1,16 @@
 package datatypes.structure.trees.basic;
 
-import datatypes.operations.trees.TreeBfsExecutor;
+import datatypes.operations.trees.traversals.TreeBfsExecutor;
 import datatypes.operations.trees.visitors.TreeNodeSearcher;
 
-public class BasicTree<T> {
+public class BasicTree {
     private BasicTreeNode root;
 
     public BasicTree() {
     }
 
-    public BasicTree(T rootData) {
-        this.root = new BasicTreeNode<>(rootData, null);
+    public void addRoot(BasicTreeNode root) {
+        this.root = root;
     }
 
     public Boolean addNode(BasicTreeNode newNode) {

@@ -1,4 +1,4 @@
 package datatypes.operations.trees;
 
-public class PreOrderSearchExecutor {
+public class TreeDfsExecutorTest {
 }
