@@ -3,7 +3,7 @@ Multiple simplifying wrappers over over-complex basic operations.
 
 [v] Cfg (parser and generator)  
 [v] Charts (wrapper over jfreechart)  
-[x] Datatypes 
+[x] Datatypes   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x] Maps  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x] Strings  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x] Doubles  
