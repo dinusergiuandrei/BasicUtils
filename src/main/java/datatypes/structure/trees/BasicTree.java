@@ -1,4 +1,4 @@
-package datatypes.structure.trees.basic;
+package datatypes.structure.trees;
 
 import datatypes.operations.trees.traversals.TreeBfsExecutor;
 import datatypes.operations.trees.visitors.TreeNodeSearcher;
@@ -37,15 +37,4 @@ public class BasicTree {
         return visitor.getFound();
     }
 
-    public Boolean isAncestor(BasicTreeNode child, BasicTreeNode ancestor) {
-        if (ancestor.isRoot())
-            return true;
-        BasicTreeNode currentNode = child;
-        while (!currentNode.isRoot()) {
-            if (currentNode == ancestor)
-                return true;
-            currentNode = currentNode.getParent();
-        }
-        return false;
-    }
 }

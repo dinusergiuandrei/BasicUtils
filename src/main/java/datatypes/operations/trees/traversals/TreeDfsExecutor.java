@@ -1,8 +1,8 @@
 package datatypes.operations.trees.traversals;
 
 import datatypes.operations.trees.visitors.TreeNodeVisitor;
-import datatypes.structure.trees.basic.BasicTreeNode;
-import datatypes.structure.trees.basic.BasicTree;
+import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.BasicTree;
 
 public class TreeDfsExecutor {
 

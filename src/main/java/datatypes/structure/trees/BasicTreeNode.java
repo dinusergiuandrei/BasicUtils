@@ -1,4 +1,4 @@
-package datatypes.structure.trees.basic;
+package datatypes.structure.trees;
 
 
 import java.util.ArrayList;
@@ -37,5 +37,17 @@ public class BasicTreeNode<T> {
 
     public Boolean isLeaf(){
         return this.children.isEmpty();
+    }
+
+    public Boolean isAncestor(BasicTreeNode ancestor) {
+        if (ancestor.isRoot())
+            return true;
+        BasicTreeNode currentNode = this;
+        while (!currentNode.isRoot()) {
+            if (currentNode == ancestor)
+                return true;
+            currentNode = currentNode.getParent();
+        }
+        return false;
     }
 }

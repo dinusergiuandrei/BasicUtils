@@ -1,4 +1,4 @@
-package datatypes.structure.trees.basic;
+package datatypes.structure.trees;
 
 import org.junit.Test;
 

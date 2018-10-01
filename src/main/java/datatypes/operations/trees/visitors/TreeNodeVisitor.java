@@ -1,6 +1,6 @@
 package datatypes.operations.trees.visitors;
 
-import datatypes.structure.trees.basic.BasicTreeNode;
+import datatypes.structure.trees.BasicTreeNode;
 
 public interface TreeNodeVisitor {
     Object visitNode(BasicTreeNode node);

@@ -49,4 +49,9 @@ public class XmlTreeNodeData {
     public Map<String, Object> getAttributes() {
         return attributes;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -1,10 +1,9 @@
-package xml;
+package xml.generator;
 
-import datatypes.structure.trees.basic.BasicTree;
-import datatypes.structure.trees.basic.BasicTreeNode;
+import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.BasicTreeNode;
 import org.junit.Before;
 import org.junit.Test;
-import xml.generator.XmlGenerator;
 import xml.tree.XmlTreeNodeData;
 
 import javax.xml.stream.XMLStreamException;

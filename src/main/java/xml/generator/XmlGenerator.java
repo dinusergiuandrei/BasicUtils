@@ -1,9 +1,7 @@
 package xml.generator;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
-import datatypes.operations.trees.visitors.TreeNodeVisitor;
-import datatypes.structure.trees.basic.BasicTree;
-import datatypes.structure.trees.basic.BasicTreeNode;
+import datatypes.structure.trees.BasicTree;
 import filemanager.FileManager;
 import xml.tree.XmlTreeNodeData;
 import xml.tree.XmlTreeNodeVisitor;
@@ -56,7 +54,6 @@ public class XmlGenerator {
         TreeDfsExecutor dfsExecutor = new TreeDfsExecutor();
         dfsExecutor.visitNodes(tree, node -> {
                     try {
-                        //System.out.println(node.getData().getClass());
                         XmlTreeNodeData data = (XmlTreeNodeData) node.getData();
                     } catch (ClassCastException e) {
                         return false;

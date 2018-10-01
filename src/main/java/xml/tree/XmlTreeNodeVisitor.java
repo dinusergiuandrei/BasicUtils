@@ -1,11 +1,10 @@
 package xml.tree;
 
 import datatypes.operations.trees.visitors.TreeNodeVisitor;
-import datatypes.structure.trees.basic.BasicTreeNode;
+import datatypes.structure.trees.BasicTreeNode;
 
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
-import java.util.List;
 
 public class XmlTreeNodeVisitor implements TreeNodeVisitor {
     private XMLStreamWriter writer;
