@@ -4,6 +4,7 @@ import datatypes.structure.trees.BasicTree;
 import datatypes.structure.trees.BasicTreeNode;
 import org.junit.Before;
 import org.junit.Test;
+import xml.XmlGenerator;
 import xml.tree.XmlTreeNodeData;
 
 import javax.xml.stream.XMLStreamException;

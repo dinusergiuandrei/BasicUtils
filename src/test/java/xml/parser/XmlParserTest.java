@@ -3,6 +3,7 @@ package xml.parser;
 import datatypes.operations.trees.TreePrinter;
 import datatypes.structure.trees.BasicTree;
 import org.junit.Test;
+import xml.XmlParser;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;

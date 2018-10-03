@@ -1,7 +1,5 @@
 package json;
 
-import datatypes.structure.trees.BasicTreeNode;
-
 public class JsonNodeData {
     private String name;
 

@@ -6,8 +6,8 @@ Multiple simplifying wrappers over over-complex basic operations.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] parser   
 [v] Charts  
 [v] FileManager  
-[x] Json  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [x] generator  
+[v] Json  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] generator  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] parser   
 [v] Reports  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] apache - docx, xlsx (easier to use);  

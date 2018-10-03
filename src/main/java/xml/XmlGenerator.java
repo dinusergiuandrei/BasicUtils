@@ -1,4 +1,4 @@
-package xml.generator;
+package xml;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.structure.trees.BasicTree;

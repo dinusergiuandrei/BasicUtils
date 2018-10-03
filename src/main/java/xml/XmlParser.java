@@ -1,4 +1,4 @@
-package xml.parser;
+package xml;
 
 
 import datatypes.structure.trees.BasicTree;
