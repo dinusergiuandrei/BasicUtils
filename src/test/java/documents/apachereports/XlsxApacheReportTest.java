@@ -1,4 +1,4 @@
-package reports.apachereports;
+package documents.apachereports;
 
 import filemanager.FileManager;
 import org.junit.Before;
@@ -6,20 +6,20 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-public class DocxApacheReportTest {
+public class XlsxApacheReportTest {
 
     String path;
 
     @Before
     public void setUp() {
-        path = "testdata/reports/apache/docxapachereport.docx";
+        path = "testdata/documents/apache/xlsapachereport.xlsx";
     }
 
     @Test
-    public void executeDocxReportTest() throws IOException {
+    public void executeXlsReportTest() throws IOException {
         String[][] matrix = {{"1", "a", "b"}, {"2", "h", "e"}, {"8", "sdaf", "fdsvsfv"}};
-        DocxApacheReport report = new DocxApacheReport();
-        report.executeDocxReport(matrix, path);
+        XlsApacheReport report = new XlsApacheReport();
+        report.executeXlsReport("sheet1", matrix, path);
         FileManager.openFileWithSystem(path);
     }
 }

@@ -18,7 +18,7 @@ public class XYLineChart extends Chart {
 
     private JFreeChart chart;
 
-    private XYDataset createDataset(List<Entry> entries) {
+    private XYDataset createDataSet(List<Entry> entries) {
         Map<String, List<XYLineChartEntry>> map = new LinkedHashMap<>();
 
         entries.forEach(
@@ -49,9 +49,9 @@ public class XYLineChart extends Chart {
         XYLineChartParams params = (XYLineChartParams) chartParams;
         chart = ChartFactory.createXYLineChart(
                 params.getChartTitle(),
-                params.getxLabel(),
-                params.getyLabel(),
-                createDataset(entries),
+                params.getXLabel(),
+                params.getYLabel(),
+                createDataSet(entries),
                 params.getPlotOrientation(),
                 params.getLegend(),
                 params.getTooltip(),

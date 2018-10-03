@@ -34,27 +34,27 @@ public class BarChartParams implements ChartParams {
         return chartTitle;
     }
 
-    public String getxLabel() {
+    String getXLabel() {
         return xLabel;
     }
 
-    public String getyLabel() {
+    String getYLabel() {
         return yLabel;
     }
 
-    public PlotOrientation getPlotOrientation() {
+    PlotOrientation getPlotOrientation() {
         return plotOrientation;
     }
 
-    public Boolean getLegend() {
+    Boolean getLegend() {
         return legend;
     }
 
-    public Boolean getTooltip() {
+    Boolean getTooltip() {
         return tooltip;
     }
 
-    public Boolean getUrls() {
+    Boolean getUrls() {
         return urls;
     }
 }

@@ -13,7 +13,7 @@ public class LineChart extends Chart {
 
     private JFreeChart chart;
 
-    private DefaultCategoryDataset createDataset(List<Entry> entries) {
+    private DefaultCategoryDataset createDataSet(List<Entry> entries) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         entries.forEach(entry -> {
             LineChartEntry lineEntry = (LineChartEntry) entry;
@@ -29,7 +29,7 @@ public class LineChart extends Chart {
                 params.getChartTitle(),
                 params.getCategoryAxisLabel(),
                 params.getValueAxisLabel(),
-                createDataset(entries),
+                createDataSet(entries),
                 params.getPlotOrientation(),
                 params.getLegend(), params.getTooltip(), params.getUrls());
 

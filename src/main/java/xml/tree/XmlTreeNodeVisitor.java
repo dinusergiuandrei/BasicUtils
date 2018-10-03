@@ -1,12 +1,12 @@
 package xml.tree;
 
-import datatypes.operations.trees.visitors.TreeNodeVisitor;
+import datatypes.operations.trees.visitors.NodeVisitor;
 import datatypes.structure.trees.BasicTreeNode;
 
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
-public class XmlTreeNodeVisitor implements TreeNodeVisitor {
+public class XmlTreeNodeVisitor implements NodeVisitor {
     private XMLStreamWriter writer;
 
     private BasicTreeNode lastNode;

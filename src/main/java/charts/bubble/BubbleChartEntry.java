@@ -2,7 +2,7 @@ package charts.bubble;
 
 import charts.Entry;
 
-public class BubbleChartEntry implements Entry {
+class BubbleChartEntry implements Entry {
     private double x;
 
     private double y;
@@ -18,19 +18,19 @@ public class BubbleChartEntry implements Entry {
         this.seriesKey = seriesKey;
     }
 
-    public double getX() {
+    double getX() {
         return x;
     }
 
-    public double getY() {
+    double getY() {
         return y;
     }
 
-    public double getRadius() {
+    double getRadius() {
         return radius;
     }
 
-    public String getSeriesKey() {
+    String getSeriesKey() {
         return seriesKey;
     }
 }

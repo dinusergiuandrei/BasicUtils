@@ -1,4 +1,4 @@
-package reports.jasperreports.basics;
+package documents.jasperreports.basics;
 
 import net.sf.dynamicreports.report.base.column.DRValueColumn;
 import net.sf.dynamicreports.report.builder.FieldBuilder;

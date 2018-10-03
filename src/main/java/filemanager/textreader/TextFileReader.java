@@ -10,7 +10,7 @@ https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 
 public abstract class TextFileReader {
 
-    protected List<String> lines = new ArrayList<>();
+    List<String> lines = new ArrayList<>();
 
     protected String text;
 

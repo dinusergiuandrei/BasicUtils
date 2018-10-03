@@ -15,15 +15,15 @@ public class XYLineChartEntry implements Entry {
         this.series = series;
     }
 
-    public Number getX() {
+    Number getX() {
         return x;
     }
 
-    public Number getY() {
+    Number getY() {
         return y;
     }
 
-    public String getSeries() {
+    String getSeries() {
         return series;
     }
 }

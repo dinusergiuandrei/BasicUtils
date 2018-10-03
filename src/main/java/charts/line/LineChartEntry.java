@@ -2,7 +2,7 @@ package charts.line;
 
 import charts.Entry;
 
-public class LineChartEntry implements Entry {
+class LineChartEntry implements Entry {
     private Number number;
     private Comparable rowKey;
     private Comparable columnKey;
@@ -13,15 +13,15 @@ public class LineChartEntry implements Entry {
         this.columnKey = columnKey;
     }
 
-    public Number getNumber() {
+    Number getNumber() {
         return number;
     }
 
-    public Comparable getRowKey() {
+    Comparable getRowKey() {
         return rowKey;
     }
 
-    public Comparable getColumnKey() {
+    Comparable getColumnKey() {
         return columnKey;
     }
 }

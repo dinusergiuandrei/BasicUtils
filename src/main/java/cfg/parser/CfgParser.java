@@ -42,18 +42,17 @@ public class CfgParser {
         }
     }
 
-    public Map<String, String> parse(String text, String separator) {
+    private Map<String, String> parse(String text, String separator) {
         List<String> lines = Strings.getLinesFromText(text);
         Map<String, String> map = new LinkedHashMap<>();
         lines.forEach(line -> {
             if (line != null && line.contains(separator)) {
-                Pair<String, String> pair = null;
                 try {
-                    pair = parseLine(line, separator);
+                    Pair<String, String> pair = parseLine(line, separator);
+                    map.put(pair.getKey(), pair.getValue());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                map.put(pair.getKey(), pair.getValue());
             }
         });
 

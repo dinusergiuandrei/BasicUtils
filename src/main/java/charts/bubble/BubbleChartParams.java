@@ -36,27 +36,27 @@ public class BubbleChartParams implements ChartParams {
         return chartTitle;
     }
 
-    public String getxLabel() {
+    String getxLabel() {
         return xLabel;
     }
 
-    public String getyLabel() {
+    String getyLabel() {
         return yLabel;
     }
 
-    public PlotOrientation getPlotOrientation() {
+    PlotOrientation getPlotOrientation() {
         return plotOrientation;
     }
 
-    public Boolean getLegend() {
+    Boolean getLegend() {
         return legend;
     }
 
-    public Boolean getTooltips() {
+    Boolean getTooltips() {
         return tooltips;
     }
 
-    public Boolean getUrls() {
+    Boolean getUrls() {
         return urls;
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LineChartTest{
 
-    private static List<Entry> createDataset( ) {
+    private static List<Entry> createDataSet( ) {
         List<Entry> entries = new ArrayList<>();
 
         entries.add(new LineChartEntry( 15 , "schools" , "1970" ));
@@ -21,8 +21,19 @@ public class LineChartTest{
     }
 
     public static void main( String[ ] args ) {
+        simpleParams();
+        complexParams();
+    }
+
+    private static void simpleParams(){
         LineChart chart = new LineChart();
-        chart.createChart(createDataset(), new LineChartParams("Numer of Schools vs years", "categories", "values"));
+        chart.createChart(createDataSet(), new LineChartParams());
+        chart.display();
+    }
+
+    private static void complexParams(){
+        LineChart chart = new LineChart();
+        chart.createChart(createDataSet(), new LineChartParams("line chart", "schools", "years"));
         chart.display();
     }
 }

@@ -55,12 +55,9 @@ public class CfgParserTest {
     }
 
     @Test
-    public void parseTextTest() {
-        String text = "abc='123'\n" +
-                "sg=1523\n" +
-                "gaet5r='gsfdg43'\n" +
-                "\"hter\"=43fgf\n";
-        Map<String, String> map = parser.parse(text, "=");
+    public void parseTextTest() throws IOException {
+        String textPath = "testdata/cfg/data1.cfg";
+        Map<String, String> map = parser.parseFile(textPath, "=");
         Assert.assertEquals("123", map.get("abc"));
         Assert.assertEquals("1523", map.get("sg"));
         Assert.assertEquals("gsfdg43", map.get("gaet5r"));

@@ -1,4 +1,4 @@
-package reports.jasperreports;
+package documents.jasperreports;
 
 import filemanager.FileManager;
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
@@ -7,9 +7,9 @@ import net.sf.dynamicreports.report.builder.column.TextColumnBuilder;
 import net.sf.dynamicreports.report.builder.style.StyleBuilder;
 import net.sf.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import reports.BasicColumn;
-import reports.jasperreports.basics.BasicFieldBuilder;
-import reports.jasperreports.basics.BasicTextColumnBuilder;
+import documents.BasicColumn;
+import documents.jasperreports.basics.BasicFieldBuilder;
+import documents.jasperreports.basics.BasicTextColumnBuilder;
 
 import java.awt.*;
 import java.io.FileOutputStream;
@@ -25,8 +25,8 @@ public class JasperReport {
     private StyleBuilder boldCenteredStyle;
     private StyleBuilder columnTitleStyle;
 
-    private <T extends Object> JasperReportBuilder build(String title, List<BasicColumn> basicColumns,
-                                      Collection<T> collection) {
+    private <T> JasperReportBuilder build(String title, List<BasicColumn> basicColumns,
+                                          Collection<T> collection) {
         if(boldStyle == null)
             boldStyle = stl.style().bold();
         if(boldCenteredStyle == null)
@@ -45,8 +45,8 @@ public class JasperReport {
                 .setDataSource(new JRBeanCollectionDataSource(collection));
     }
 
-    public <T extends Object> void execute(String title, List<BasicColumn> basicColumns,
-                          Collection<T> collection, String path, REPORT_FORMAT format){
+    public <T> void execute(String title, List<BasicColumn> basicColumns,
+                            Collection<T> collection, String path, REPORT_FORMAT format){
         try {
             FileOutputStream fos = FileManager.computeOutputStream(path);
             JasperReportBuilder builder = this.build(title, basicColumns, collection);

@@ -1,4 +1,4 @@
-package reports;
+package documents;
 
 public class BasicColumn {
     private String title;

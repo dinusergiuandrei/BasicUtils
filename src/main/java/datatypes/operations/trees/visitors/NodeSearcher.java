@@ -2,12 +2,12 @@ package datatypes.operations.trees.visitors;
 
 import datatypes.structure.trees.BasicTreeNode;
 
-public class TreeNodeSearcher implements TreeNodeVisitor{
+public class NodeSearcher implements NodeVisitor {
     private Boolean found;
 
     private BasicTreeNode target;
 
-    public TreeNodeSearcher(BasicTreeNode target) {
+    public NodeSearcher(BasicTreeNode target) {
         this.target = target;
         found = false;
     }

@@ -12,11 +12,11 @@ public class PieChartEntry implements Entry {
         this.value = value;
     }
 
-    public Comparable getKey() {
+    Comparable getKey() {
         return key;
     }
 
-    public Number getValue() {
+    Number getValue() {
         return value;
     }
 }

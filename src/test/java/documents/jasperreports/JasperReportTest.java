@@ -1,11 +1,9 @@
-package reports.jasperreports;
+package documents.jasperreports;
 
-import filemanager.FileManager;
 import org.junit.Before;
 import org.junit.Test;
-import reports.BasicColumn;
+import documents.BasicColumn;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +28,7 @@ public class JasperReportTest {
         collection.add(new TestElement(3, "element -97", "error already"));
         collection.add(new TestElement(4, "consistency", "quality jokes everywhere"));
 
-        path = "testdata/reports/jasper/test";
+        path = "testdata/documents/jasper/test";
 
     }
 

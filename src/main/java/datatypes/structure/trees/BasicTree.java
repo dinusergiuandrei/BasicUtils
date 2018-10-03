@@ -1,7 +1,7 @@
 package datatypes.structure.trees;
 
 import datatypes.operations.trees.traversals.TreeBfsExecutor;
-import datatypes.operations.trees.visitors.TreeNodeSearcher;
+import datatypes.operations.trees.visitors.NodeSearcher;
 
 public class BasicTree {
     private BasicTreeNode root;
@@ -32,7 +32,7 @@ public class BasicTree {
 
     public Boolean containsNode(BasicTreeNode node) {
         TreeBfsExecutor searchExecutor = new TreeBfsExecutor();
-        TreeNodeSearcher visitor = new TreeNodeSearcher(node);
+        NodeSearcher visitor = new NodeSearcher(node);
         searchExecutor.visitNodes(this, visitor);
         return visitor.getFound();
     }

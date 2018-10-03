@@ -29,8 +29,8 @@ public class BarChart extends Chart {
         BarChartParams params = (BarChartParams) chartParams;
         this.barChart = ChartFactory.createBarChart(
                 params.getChartTitle(),
-                params.getxLabel(),
-                params.getyLabel(),
+                params.getXLabel(),
+                params.getYLabel(),
                 createDataSet(entries),
                 params.getPlotOrientation(),
                 params.getLegend(),

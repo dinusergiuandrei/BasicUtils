@@ -15,7 +15,7 @@ public class PieChart extends Chart {
 
     private JFreeChart chart;
 
-    private PieDataset createDataset(List<Entry> entries) {
+    private PieDataset createDataSet(List<Entry> entries) {
         DefaultPieDataset dataset = new DefaultPieDataset( );
         entries.forEach(entry -> {
             PieChartEntry pieEntry = (PieChartEntry) entry;
@@ -28,7 +28,7 @@ public class PieChart extends Chart {
         PieChartParams params = (PieChartParams) chartParams;
         chart = ChartFactory.createPieChart(
                 params.getChartTitle(),
-                createDataset(entries),
+                createDataSet(entries),
                 params.getLegend(),
                 params.getTooltip(),
                 params.getUrls());

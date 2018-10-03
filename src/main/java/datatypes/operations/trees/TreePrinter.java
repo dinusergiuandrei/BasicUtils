@@ -1,7 +1,7 @@
 package datatypes.operations.trees;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
-import datatypes.operations.trees.visitors.TreeNodeVisitor;
+import datatypes.operations.trees.visitors.NodeVisitor;
 import datatypes.structure.trees.BasicTree;
 import datatypes.structure.trees.BasicTreeNode;
 
@@ -17,7 +17,7 @@ public class TreePrinter {
         System.out.println(visitor.getBuilder().toString());
     }
 
-    class TreePrinterVisitor implements TreeNodeVisitor{
+    class TreePrinterVisitor implements NodeVisitor {
         private StringBuilder builder = new StringBuilder();
         private Stack<BasicTreeNode> stack = new Stack<>();
 

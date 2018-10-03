@@ -8,7 +8,7 @@ Multiple simplifying wrappers over over-complex basic operations.
 [v] FileManager  
 [x] Json  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [x] generator  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [x] parser   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] parser   
 [v] Reports  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] apache - docx, xlsx (easier to use);  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] jasper - docx, pdf, html, pptx, png, jpg, gif, odt, rtf    

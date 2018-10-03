@@ -1,4 +1,4 @@
-package reports.apachereports;
+package documents.apachereports;
 
 import filemanager.FileManager;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -8,8 +8,8 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class DocxApacheReport {
-    public void executeDocxReport(String[][] matrix, String path) throws IOException {
+public class DocXApacheReport {
+    public void executeDocXReport(String[][] matrix, String path) throws IOException {
         XWPFDocument document = new XWPFDocument();
         FileOutputStream out = FileManager.computeOutputStream(path);
         XWPFTable table = document.createTable();
