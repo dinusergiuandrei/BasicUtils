@@ -1,4 +1,4 @@
-package datatypes.operations.maps;
+package datatypes.operations;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

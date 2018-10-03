@@ -21,6 +21,6 @@ public class SaveTest {
     public static void main(String[] args) throws IOException {
         PieChart chart = new PieChart();
         chart.createChart(createDataset(), new PieChartParams());
-        chart.save("D:\\Wrappers\\Charts\\Photos\\demo.jpeg");
+        chart.save("testdata/charts/demo.jpeg");
     }
 }

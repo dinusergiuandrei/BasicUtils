@@ -1,7 +1,7 @@
 package cfg;
 
 import cfg.writer.CfgWriter;
-import datatypes.operations.maps.Maps;
+import datatypes.operations.Maps;
 import org.junit.Before;
 import org.junit.Test;
 

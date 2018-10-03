@@ -48,6 +48,23 @@ public class FileManager {
         file.createNewFile();
     }
 
+    public static String getTextFromStream(InputStream stream) throws IOException {
+        BufferedReader rd = new BufferedReader(new InputStreamReader(stream));
+        return getStringFromBufferedReader(rd);
+    }
+
+    public static String getStringFromBufferedReader(BufferedReader br) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        String line = br.readLine();
+
+        while (line != null) {
+            sb.append(line);
+            sb.append(System.lineSeparator());
+            line = br.readLine();
+        }
+        return sb.toString();
+    }
+
     public static String getTextFromFile(String path) throws IOException {
         TextFileReader reader = new BufferedTextFileReader();
         reader.read(path);
@@ -76,5 +93,38 @@ public class FileManager {
         FileManager.createFile(outputPath);
         File file = new File(outputPath);
         return new FileOutputStream(file);
+    }
+
+    public static String getCurrentWorkingDirectory(){
+        return System.getProperty("user.dir");
+    }
+
+    public static String getFilePathSeparator(){
+        return "/";
+        //return System.getProperty("file.separator");
+    }
+
+    public static String getLineSeparator(){
+        return System.lineSeparator();
+    }
+
+    public static void removeDirectory(String directoryPath)  {
+        File file = new File(directoryPath);
+        if(!file.exists())
+            return;
+        if(file.isFile()){
+            if(!file.delete()){
+                System.err.println("Could not deleteEntry file: " + file.getPath());
+            }
+        }
+        else {
+            File[] files = file.listFiles();
+            for (File childFile : files) {
+                removeDirectory(childFile.getAbsolutePath());
+            }
+            if(!file.delete()){
+                System.err.println("Could not deleteEntry directory: " + file.getPath());
+            }
+        }
     }
 }

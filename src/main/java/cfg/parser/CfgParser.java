@@ -1,6 +1,6 @@
 package cfg.parser;
 
-import datatypes.operations.strings.Strings;
+import datatypes.operations.Strings;
 import filemanager.FileManager;
 import javafx.util.Pair;
 
@@ -57,6 +57,10 @@ public class CfgParser {
         });
 
         return map;
+    }
+
+    public Map<String, String> parseFile(String filePath) throws IOException {
+        return parseFile(filePath, "=");
     }
 
     public Map<String, String> parseFile(String filePath, String separator) throws IOException {

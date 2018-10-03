@@ -18,7 +18,6 @@ public class BufferedTextFileReader extends TextFileReader {
                 this.lines.add(line);
                 line = br.readLine();
             }
-            this.text = sb.toString();
         }
     }
 
