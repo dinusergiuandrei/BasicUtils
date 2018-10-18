@@ -1,9 +1,12 @@
 package chatbot;
 
+import chatbot.Classes.Category;
 import datatypes.operations.trees.TreePrinter;
 import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.BasicTreeNode;
 import xml.XmlGenerator;
 import xml.XmlParser;
+import xml.tree.XmlTreeNodeData;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
@@ -21,11 +24,16 @@ public class ChatbotApplication {
         BasicTree generatedTree = new BasicTree();
 
         // generate tree
+        BasicTreeNode<XmlTreeNodeData> root
+                = new BasicTreeNode<>(new XmlTreeNodeData("aiml"), null);
 
-
+        generatedTree.addNode(root);
+        Category category = new Category("abc", "123");
+        category.addToTree(generatedTree, root);
 
         xmlGenerator.writeAsXml(generatedTree, outputPath);
 
     }
+
 
 }
