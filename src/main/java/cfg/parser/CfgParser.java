@@ -1,8 +1,9 @@
 package cfg.parser;
 
 import datatypes.operations.Strings;
+import datatypes.structure.Pair;
 import filemanager.FileManager;
-import javafx.util.Pair;
+
 
 import java.io.IOException;
 import java.util.LinkedHashMap;

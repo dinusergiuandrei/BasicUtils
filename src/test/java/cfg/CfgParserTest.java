@@ -1,7 +1,7 @@
 package cfg;
 
 import cfg.parser.CfgParser;
-import javafx.util.Pair;
+import datatypes.structure.Pair;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
