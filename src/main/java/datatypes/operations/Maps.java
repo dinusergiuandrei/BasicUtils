@@ -10,7 +10,7 @@ public class Maps {
         return newMap;
     }
 
-    public static void displayMap(Map<Object, Object> map){
-        map.forEach((k, v) -> System.out.println(k.toString() + " : " + v.toString()));
+    public static void displayMap(Map<Object, Object> map, String separator){
+        map.forEach((k, v) -> System.out.println(k.toString() + separator + v.toString()));
     }
 }

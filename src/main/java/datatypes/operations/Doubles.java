@@ -3,31 +3,25 @@ package datatypes.operations;
 import java.util.List;
 
 public class Doubles {
-    public static Double getMin(List<Double> ints){
-        Double minNumber = ints.get(0);
-        for (int i = 1; i < ints.size(); i++) {
-            if(ints.get(i)<minNumber)
-                minNumber=ints.get(i);
-        }
-        return minNumber;
+    private static NumbersExpert<Double> expert;
+
+    static {
+        expert = new NumbersExpert<>();
     }
 
-    public static Double getMax(List<Double> ints){
-        Double maxNumber = ints.get(0);
-        for (int i = 1; i < ints.size(); i++) {
-            if(ints.get(i)>maxNumber)
-                maxNumber=ints.get(i);
-        }
-        return maxNumber;
+    public static Double getMin(List<Double> doubles){
+        return expert.getMin(doubles);
     }
 
-    public static Double getAverage(List<Double> ints){
-        Double avg;
-        Double sum = 0D;
-        for (Double integer : ints) {
-            sum += integer;
-        }
-        avg = sum * 1.0 / ints.size();
-        return avg;
+    public static Double getMax(List<Double> doubles){
+        return expert.getMax(doubles);
+    }
+
+    public static Double getAverage(List<Double> doubles){
+        return expert.getAverage(doubles);
+    }
+
+    public static Double getVariance(List<Double> doubles){
+        return expert.getVariance(doubles);
     }
 }
