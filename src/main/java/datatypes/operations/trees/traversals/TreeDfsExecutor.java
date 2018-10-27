@@ -1,6 +1,6 @@
 package datatypes.operations.trees.traversals;
 
-import datatypes.operations.trees.visitors.NodeVisitor;
+import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.trees.BasicTreeNode;
 import datatypes.structure.trees.BasicTree;
 

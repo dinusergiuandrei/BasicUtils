@@ -1,19 +1,19 @@
-package datatypes.operations.trees.visitors;
+package datatypes.operations.visitors;
 
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.Node;
 
 public class NodeSearcher implements NodeVisitor {
     private Boolean found;
 
-    private BasicTreeNode target;
+    private Node target;
 
-    public NodeSearcher(BasicTreeNode target) {
+    public NodeSearcher(Node target) {
         this.target = target;
         found = false;
     }
 
     @Override
-    public Object visitNode(BasicTreeNode node) {
+    public Object visitNode(Node node) {
         if(node == target){
             found = true;
         }
@@ -24,7 +24,7 @@ public class NodeSearcher implements NodeVisitor {
         return found;
     }
 
-    public Boolean getFound() {
+    public Boolean isFound() {
         return found;
     }
 }

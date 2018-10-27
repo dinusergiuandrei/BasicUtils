@@ -1,7 +1,8 @@
 package datatypes.operations.trees;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
-import datatypes.operations.trees.visitors.NodeVisitor;
+import datatypes.operations.visitors.NodeVisitor;
+import datatypes.structure.Node;
 import datatypes.structure.trees.BasicTree;
 import datatypes.structure.trees.BasicTreeNode;
 
@@ -22,18 +23,19 @@ public class TreePrinter {
         private Stack<BasicTreeNode> stack = new Stack<>();
 
         @Override
-        public Object visitNode(BasicTreeNode node) {
+        public Object visitNode(Node node) {
+            BasicTreeNode treeNode = (BasicTreeNode) node;
             if(!stack.empty()) {
-                if (node.getParent() == stack.peek()) {
-                    stack.push(node);
+                if (treeNode.getParent() == stack.peek()) {
+                    stack.push(treeNode);
                 } else {
-                    while (node.getParent() != stack.peek()) {
+                    while (treeNode.getParent() != stack.peek()) {
                         stack.pop();
                     }
-                    stack.push(node);
+                    stack.push(treeNode);
                 }
             } else {
-                stack.push(node);
+                stack.push(treeNode);
             }
 
             char sep = '-';
@@ -43,7 +45,7 @@ public class TreePrinter {
             }
             String tabs = tabsBuilder.toString();
 
-            System.out.println(tabs + node.getData().toString());
+            System.out.println(tabs + treeNode.getData().toString());
             return null;
         }
 

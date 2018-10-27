@@ -1,6 +1,7 @@
 package xml.tree;
 
-import datatypes.operations.trees.visitors.NodeVisitor;
+import datatypes.operations.visitors.NodeVisitor;
+import datatypes.structure.Node;
 import datatypes.structure.trees.BasicTreeNode;
 
 import javax.xml.stream.XMLStreamException;
@@ -17,13 +18,14 @@ public class XmlTreeNodeVisitor implements NodeVisitor {
     }
 
     @Override
-    public Object visitNode(BasicTreeNode node) {
+    public Object visitNode(Node node) {
         try {
-            XmlTreeNodeData data = (XmlTreeNodeData) node.getData();
+            BasicTreeNode treeNode = (BasicTreeNode) node;
+            XmlTreeNodeData data = (XmlTreeNodeData) treeNode.getData();
 
-            if (node.isRoot()) {
+            if (treeNode.isRoot()) {
                 this.writeNodeData(data);
-                lastNode = node;
+                lastNode = treeNode;
                 return null;
             }
 
@@ -33,13 +35,13 @@ public class XmlTreeNodeVisitor implements NodeVisitor {
             if (nodeHeight.equals(lastNodeHeight)) {
                 writer.writeEndElement();
                 this.writeNodeData(data);
-                lastNode = node;
+                lastNode = treeNode;
                 return null;
             }
 
             if (nodeHeight > lastNodeHeight) {
                 this.writeNodeData(data);
-                lastNode = node;
+                lastNode = treeNode;
                 return null;
             }
 
@@ -48,7 +50,7 @@ public class XmlTreeNodeVisitor implements NodeVisitor {
                     writer.writeEndElement();
                 }
                 this.writeNodeData(data);
-                lastNode = node;
+                lastNode = treeNode;
                 return null;
             }
 

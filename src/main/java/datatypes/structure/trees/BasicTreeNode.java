@@ -1,16 +1,17 @@
 package datatypes.structure.trees;
 
 
+import datatypes.structure.Node;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicTreeNode<T> {
-    private T data;
+public class BasicTreeNode<T> extends Node<T> {
     private BasicTreeNode parent;
     private List<BasicTreeNode> children;
 
     public BasicTreeNode(T data, BasicTreeNode parent) {
-        this.data = data;
+        super(data);
         this.parent = parent;
         this.children = new ArrayList<>();
     }
@@ -21,10 +22,6 @@ public class BasicTreeNode<T> {
 
     public Boolean isRoot(){
         return parent == null;
-    }
-
-    public T getData() {
-        return data;
     }
 
     public BasicTreeNode getParent() {

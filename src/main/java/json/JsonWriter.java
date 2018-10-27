@@ -2,13 +2,12 @@ package json;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.TreeNode;
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
-import datatypes.operations.trees.visitors.NodeVisitor;
+import datatypes.operations.visitors.NodeVisitor;
+import datatypes.structure.Node;
 import datatypes.structure.trees.BasicTree;
 import datatypes.structure.trees.BasicTreeNode;
 import filemanager.FileManager;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.List;
@@ -38,9 +37,10 @@ public class JsonWriter {
         }
 
         @Override
-        public Object visitNode(BasicTreeNode node) {
-            if (node.getData() instanceof JsonNodeData) { // leaf
-                JsonNodeData jsonNodeData = (JsonNodeData) node.getData();
+        public Object visitNode(Node node) {
+            BasicTreeNode treeNode = (BasicTreeNode) node;
+            if (treeNode.getData() instanceof JsonNodeData) { // leaf
+                JsonNodeData jsonNodeData = (JsonNodeData) treeNode.getData();
 
                 if (jsonNodeData.getData() instanceof String) {
                     try {
@@ -64,7 +64,7 @@ public class JsonWriter {
                 }
             } else { // not leaf
                 try {
-                    generator.writeFieldName(node.getData().toString());
+                    generator.writeFieldName(treeNode.getData().toString());
                     generator.writeStartObject();
                 } catch (IOException e) {
                     e.printStackTrace();

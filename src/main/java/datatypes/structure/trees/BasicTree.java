@@ -1,7 +1,7 @@
 package datatypes.structure.trees;
 
 import datatypes.operations.trees.traversals.TreeBfsExecutor;
-import datatypes.operations.trees.visitors.NodeSearcher;
+import datatypes.operations.visitors.NodeSearcher;
 
 public class BasicTree {
     private BasicTreeNode root;
@@ -34,7 +34,7 @@ public class BasicTree {
         TreeBfsExecutor searchExecutor = new TreeBfsExecutor();
         NodeSearcher visitor = new NodeSearcher(node);
         searchExecutor.visitNodes(this, visitor);
-        return visitor.getFound();
+        return visitor.isFound();
     }
 
 }

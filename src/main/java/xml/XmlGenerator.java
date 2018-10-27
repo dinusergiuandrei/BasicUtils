@@ -2,6 +2,7 @@ package xml;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.BasicTreeNode;
 import filemanager.FileManager;
 import xml.tree.XmlTreeNodeData;
 import xml.tree.XmlTreeNodeVisitor;
@@ -39,11 +40,12 @@ public class XmlGenerator {
     private void updateHeights(BasicTree tree) {
         TreeDfsExecutor dfsExecutor = new TreeDfsExecutor();
         dfsExecutor.visitNodes(tree, node -> {
-            XmlTreeNodeData data = (XmlTreeNodeData) node.getData();
-            if (node.isRoot())
+            BasicTreeNode treeNode = (BasicTreeNode) node;
+            XmlTreeNodeData data = (XmlTreeNodeData) treeNode.getData();
+            if (treeNode.isRoot())
                 data.setHeight(0);
             else {
-                XmlTreeNodeData parentData = (XmlTreeNodeData) node.getParent().getData();
+                XmlTreeNodeData parentData = (XmlTreeNodeData) treeNode.getParent().getData();
                 data.setHeight(parentData.getHeight() + 1);
             }
             return null;
