@@ -1,11 +1,11 @@
 package gga;
 
-import genericgeneticalgorithm.defaultimplementations.functions.TestFunction;
-import genericgeneticalgorithm.geneticalgorithm.GeneticAlgorithm;
-import genericgeneticalgorithm.geneticalgorithm.GeneticAlgorithmWithStatistics;
-import genericgeneticalgorithm.geneticalgorithm.evaluator.Function;
-import genericgeneticalgorithm.geneticalgorithm.genetic_algoritm_metadata.parameters.GaParameters;
-import genericgeneticalgorithm.geneticalgorithm.genetic_algoritm_metadata.parameters.GaParametersLoader;
+import geneticalgorithm.defaultimplementations.functions.TestFunction;
+import geneticalgorithm.geneticalgorithm.GeneticAlgorithm;
+import geneticalgorithm.geneticalgorithm.GeneticAlgorithmWithStatistics;
+import geneticalgorithm.geneticalgorithm.evaluator.Function;
+import geneticalgorithm.geneticalgorithm.genetic_algoritm_metadata.parameters.GaParameters;
+import geneticalgorithm.geneticalgorithm.genetic_algoritm_metadata.parameters.GaParametersLoader;
 
 public class GGATest {
     public static void main(String args[]) throws Exception {

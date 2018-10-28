@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+//todo: actually test json writer
 public class JsonWriterTest {
     private String path = "testdata/json/data.json";
     private JsonWriter writer = new JsonWriter();

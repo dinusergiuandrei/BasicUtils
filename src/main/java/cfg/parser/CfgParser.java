@@ -65,7 +65,8 @@ public class CfgParser {
     }
 
     public Map<String, String> parseFile(String filePath, String separator) throws IOException {
-        return parse(FileManager.getTextFromFile(filePath), separator);
+        String text = FileManager.getTextFromFile(filePath);
+        return parse(text, separator);
     }
 
     private String cleanElement(String element) {

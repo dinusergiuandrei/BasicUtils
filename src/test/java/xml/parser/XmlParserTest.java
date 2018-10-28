@@ -8,6 +8,7 @@ import xml.XmlParser;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 
+//todo: actually test xml parser
 public class XmlParserTest {
     @Test
     public void parse() throws IOException, XMLStreamException {

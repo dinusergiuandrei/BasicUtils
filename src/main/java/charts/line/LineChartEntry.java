@@ -2,7 +2,7 @@ package charts.line;
 
 import charts.Entry;
 
-class LineChartEntry implements Entry {
+public class LineChartEntry implements Entry {
     private Number number;
     private Comparable rowKey;
     private Comparable columnKey;

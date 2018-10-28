@@ -8,7 +8,7 @@ import java.util.List;
 public class BufferedTextFileReader extends TextFileReader {
 
     public void read(String sourceFilePath) throws IOException {
-        try(BufferedReader br = new BufferedReader(new FileReader(sourceFilePath))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(sourceFilePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
 
@@ -18,6 +18,8 @@ public class BufferedTextFileReader extends TextFileReader {
                 this.lines.add(line);
                 line = br.readLine();
             }
+
+            this.text = sb.toString();
         }
     }
 

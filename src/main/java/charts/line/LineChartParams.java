@@ -3,7 +3,7 @@ package charts.line;
 import charts.ChartParams;
 import org.jfree.chart.plot.PlotOrientation;
 
-class LineChartParams implements ChartParams {
+public class LineChartParams implements ChartParams {
     private String chartTitle;
     private String categoryAxisLabel;
     private String valueAxisLabel;

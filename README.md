@@ -17,10 +17,13 @@ Multiple simplifying wrappers over over-complex basic operations.
 [v] Xml  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] generator  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [v] parser  
-[x] Datatypes   
+[v] Datatypes   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Maps  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Strings  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Doubles  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Integers    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Trees  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x] Graphs    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Graphs    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[v] Sets      
+[x] Deep learning (based on deeplearning4j)  
+[x] GPU acceleration (JCuda, JOCL) (http://jcuda.org/, http://jocl.org/)

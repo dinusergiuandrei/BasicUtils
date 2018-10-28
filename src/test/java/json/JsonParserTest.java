@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+//todo: actually test json parser, not just demo
 public class JsonParserTest {
     private String path;
     private JsonParser parser = new JsonParser();

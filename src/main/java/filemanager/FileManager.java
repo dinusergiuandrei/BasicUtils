@@ -26,6 +26,11 @@ public class FileManager {
         return true;
     }
 
+    public static Boolean existsFile(String path){
+        File file = new File(path);
+        return file.exists() && file.isFile();
+    }
+
     public static Boolean deleteFile(String path) {
         File file = new File(path);
         return file.delete();

@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.sql.SQLException;
 
+// todo: better testing for sqlite database
 public class SqliteDatabaseTest {
     private TableModel tableModel;
     private SQLiteDatabase database;

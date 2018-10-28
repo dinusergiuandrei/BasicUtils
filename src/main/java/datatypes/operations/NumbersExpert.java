@@ -8,7 +8,7 @@ public class NumbersExpert<T extends Number & Comparable> {
     public T getMin(List<T> numbers) {
         T minNumber = numbers.get(0);
         for (int i = 1; i < numbers.size(); i++) {
-            if (numbers.get(i).compareTo(minNumber)>0)
+            if (numbers.get(i).compareTo(minNumber) < 0)
                 minNumber = numbers.get(i);
         }
         return minNumber;
@@ -17,7 +17,7 @@ public class NumbersExpert<T extends Number & Comparable> {
     public T getMax(List<T> numbers) {
         T maxNumber = numbers.get(0);
         for (int i = 1; i < numbers.size(); i++) {
-            if (numbers.get(i).compareTo(maxNumber)<0)
+            if (numbers.get(i).compareTo(maxNumber) > 0)
                 maxNumber = numbers.get(i);
         }
         return maxNumber;
@@ -31,11 +31,27 @@ public class NumbersExpert<T extends Number & Comparable> {
         return (sum.doubleValue() / numbers.size());
     }
 
-    public Double getVariance(List<T> numbers){
-        NumbersExpert<T> expert = new NumbersExpert<>();
-        Double avg = expert.getAverage(numbers);
-        List<Double> ints2 = numbers.stream().mapToDouble((number -> new BigDecimal(number.toString()).floatValue() )).boxed().collect(Collectors.toList());
-        Double avg2 = Doubles.getAverage(ints2);
-        return avg2-avg*avg;
+    /**
+     * Not precise because of BigDecimal(String).doubleValue()
+     */
+    public Double getVariance(List<T> numbers) {
+        Double avg = this.getAverage(numbers);
+        List<Double> numbers2
+                = numbers
+                .stream()
+                .mapToDouble(
+                        (number ->
+                                Math.pow(
+                                        new BigDecimal(number.toString())
+                                            .doubleValue(),
+                                        2
+                                )
+                        ))
+                .boxed()
+                .collect(
+                        Collectors.toList()
+                );
+        Double avg2 = Doubles.getAverage(numbers2);
+        return avg2 - avg * avg;
     }
 }

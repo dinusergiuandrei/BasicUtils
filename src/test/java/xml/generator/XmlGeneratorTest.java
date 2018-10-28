@@ -10,6 +10,8 @@ import xml.tree.XmlTreeNodeData;
 import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 
+
+//todo: actually test xml generator
 public class XmlGeneratorTest {
 
     private BasicTree tree;

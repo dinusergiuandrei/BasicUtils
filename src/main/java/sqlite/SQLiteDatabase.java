@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+//todo: finish and check implementation
 public class SQLiteDatabase implements AutoCloseable {
     private String databaseUrl;
 

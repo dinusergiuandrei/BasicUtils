@@ -2,7 +2,7 @@ package charts.bar;
 
 import charts.Entry;
 
-class BarChartEntry implements Entry {
+public class BarChartEntry implements Entry {
     private Number value;
 
     private Comparable rowKey;

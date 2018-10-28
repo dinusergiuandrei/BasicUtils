@@ -2,7 +2,7 @@ package charts.bubble;
 
 import charts.Entry;
 
-class BubbleChartEntry implements Entry {
+public class BubbleChartEntry implements Entry {
     private double x;
 
     private double y;
