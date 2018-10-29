@@ -1,7 +1,7 @@
 package json;
 
 import datatypes.operations.trees.TreePrinter;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class JsonParserTest {
     @Test
     public void parseTest() throws IOException {
         path = "testdata/json/data.json";
-        BasicTree tree = parser.parse(path);
+        Tree tree = parser.parse(path);
         TreePrinter printer = new TreePrinter();
         printer.displayTree(tree);
     }

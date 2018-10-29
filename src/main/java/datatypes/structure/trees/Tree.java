@@ -3,10 +3,10 @@ package datatypes.structure.trees;
 import datatypes.operations.trees.traversals.TreeBfsExecutor;
 import datatypes.operations.visitors.NodeSearcher;
 
-public class BasicTree {
+public class Tree {
     private TreeNode root;
 
-    public BasicTree() {
+    public Tree() {
     }
 
     public void addRoot(TreeNode root) {

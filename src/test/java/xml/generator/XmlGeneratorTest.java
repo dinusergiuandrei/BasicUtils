@@ -1,6 +1,6 @@
 package xml.generator;
 
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +14,7 @@ import java.io.IOException;
 //todo: actually test xml generator
 public class XmlGeneratorTest {
 
-    private BasicTree tree;
+    private Tree tree;
 
     private String path;
 
@@ -24,7 +24,7 @@ public class XmlGeneratorTest {
     public void setUp(){
         path = "testdata/xml/xmltest1.xml";
         xmlGenerator = new XmlGenerator();
-        tree = new BasicTree();
+        tree = new Tree();
 
         XmlTreeNodeData rootData = new XmlTreeNodeData("root");
         XmlTreeNodeData nodeData1 = new XmlTreeNodeData("node1");

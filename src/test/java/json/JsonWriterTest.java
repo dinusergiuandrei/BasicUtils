@@ -1,6 +1,6 @@
 package json;
 
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.io.IOException;
 public class JsonWriterTest {
     private String path = "testdata/json/data.json";
     private JsonWriter writer = new JsonWriter();
-    private BasicTree tree;
+    private Tree tree;
 
     @Before
     public void setUp() throws IOException {

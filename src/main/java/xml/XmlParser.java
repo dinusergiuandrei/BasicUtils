@@ -1,7 +1,7 @@
 package xml;
 
 
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import xml.tree.XmlTreeNodeData;
 
@@ -16,12 +16,12 @@ import java.util.Stack;
 //https://stackoverflow.com/questions/5059224/which-is-the-best-library-for-xml-parsing-in-java
 
 public class XmlParser {
-    public BasicTree parse(String path) throws XMLStreamException, IOException {
+    public Tree parse(String path) throws XMLStreamException, IOException {
         FileInputStream fis = new FileInputStream(path);
         XMLInputFactory xmlInFact = XMLInputFactory.newInstance();
         XMLStreamReader reader = xmlInFact.createXMLStreamReader(fis);
 
-        BasicTree tree = new BasicTree();
+        Tree tree = new Tree();
 
         Stack<TreeNode> nodeStack = new Stack<>();
 

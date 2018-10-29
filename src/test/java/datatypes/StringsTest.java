@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringsTest {
-    List<String> lines = new ArrayList<>();
-    String text;
+    private List<String> lines = new ArrayList<>();
+    private String text;
 
     @Before
     public void setUp() {

@@ -1,7 +1,7 @@
 package xml;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 import xml.tree.XmlTreeNodeData;
@@ -14,7 +14,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class XmlGenerator {
-    public void writeAsXml(BasicTree tree, String outputPath) throws XMLStreamException, IOException {
+    public void writeAsXml(Tree tree, String outputPath) throws XMLStreamException, IOException {
 
         if (!isValidXmlTree(tree)) {
             System.out.println("Given tree is not a valid XML tree.");
@@ -37,7 +37,7 @@ public class XmlGenerator {
         }
     }
 
-    private void updateHeights(BasicTree tree) {
+    private void updateHeights(Tree tree) {
         TreeDfsExecutor dfsExecutor = new TreeDfsExecutor();
         dfsExecutor.visitNodes(tree, node -> {
             TreeNode treeNode = (TreeNode) node;
@@ -52,7 +52,7 @@ public class XmlGenerator {
         });
     }
 
-    private Boolean isValidXmlTree(BasicTree tree) {
+    private Boolean isValidXmlTree(Tree tree) {
         TreeDfsExecutor dfsExecutor = new TreeDfsExecutor();
         dfsExecutor.visitNodes(tree, node -> {
                     try {

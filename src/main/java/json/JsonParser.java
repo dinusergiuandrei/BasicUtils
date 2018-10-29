@@ -1,7 +1,7 @@
 package json;
 
 
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 import org.json.JSONArray;
@@ -11,10 +11,10 @@ import java.io.IOException;
 
 public class JsonParser {
 
-    public BasicTree parse(String sourcePath) throws IOException {
+    public Tree parse(String sourcePath) throws IOException {
         JSONObject obj = new JSONObject(FileManager.getTextFromFile(sourcePath));
 
-        BasicTree tree = new BasicTree();
+        Tree tree = new Tree();
 
         TreeNode<String> root = new TreeNode<>("root", null);
         tree.addNode(root);
@@ -24,7 +24,7 @@ public class JsonParser {
         return tree;
     }
 
-    private void parseObject(JSONObject object, TreeNode parent, BasicTree tree) {
+    private void parseObject(JSONObject object, TreeNode parent, Tree tree) {
         object.keySet().forEach(
                 key -> {
                     Object value = object.get(key);

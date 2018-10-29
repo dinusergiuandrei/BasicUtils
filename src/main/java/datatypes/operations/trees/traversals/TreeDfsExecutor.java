@@ -2,11 +2,11 @@ package datatypes.operations.trees.traversals;
 
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.trees.TreeNode;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 
 public class TreeDfsExecutor {
 
-    public void visitNodes(BasicTree tree, NodeVisitor visitor) {
+    public void visitNodes(Tree tree, NodeVisitor visitor) {
         this.startVisiting(tree.getRoot(), visitor);
     }
 

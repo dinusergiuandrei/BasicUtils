@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.Node;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class JsonWriter {
-    public void writeJson(String outputPath, BasicTree tree) throws IOException {
+    public void writeJson(String outputPath, Tree tree) throws IOException {
         TreeDfsExecutor executor = new TreeDfsExecutor();
 
         JsonFactory factory = new JsonFactory();

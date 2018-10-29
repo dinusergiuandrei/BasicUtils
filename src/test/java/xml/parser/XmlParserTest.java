@@ -1,7 +1,7 @@
 package xml.parser;
 
 import datatypes.operations.trees.TreePrinter;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import org.junit.Test;
 import xml.XmlParser;
 
@@ -14,7 +14,7 @@ public class XmlParserTest {
     public void parse() throws IOException, XMLStreamException {
         String path = "testdata/xml/xmltest1.xml";
         XmlParser parser = new XmlParser();
-        BasicTree tree = parser.parse(path);
+        Tree tree = parser.parse(path);
         new TreePrinter().displayTree(tree);
     }
 }

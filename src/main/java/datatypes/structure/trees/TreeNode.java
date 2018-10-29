@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TreeNode<T> extends Node<T> {
     private TreeNode parent;
-    private List<TreeNode> children;
+    List<TreeNode> children;
 
     public TreeNode(T data, TreeNode parent) {
         super(data);

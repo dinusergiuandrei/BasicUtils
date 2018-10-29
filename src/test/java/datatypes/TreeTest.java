@@ -1,14 +1,14 @@
 package datatypes;
 
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 import datatypes.structure.trees.TreeNode;
 import org.junit.Test;
 
-public class BasicTreeTest {
+public class TreeTest {
 
     @Test
     public void treeTest(){
-        BasicTree tree = new BasicTree();
+        Tree tree = new Tree();
         TreeNode<Integer> root = new TreeNode<>(0, null);
 
         TreeNode<Integer> node1 = new TreeNode<>(1, root);

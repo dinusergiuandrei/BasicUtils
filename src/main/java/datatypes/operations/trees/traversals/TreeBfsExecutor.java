@@ -2,7 +2,7 @@ package datatypes.operations.trees.traversals;
 
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.trees.TreeNode;
-import datatypes.structure.trees.BasicTree;
+import datatypes.structure.trees.Tree;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class TreeBfsExecutor {
 
     private Queue<TreeNode> queue = new ArrayDeque<>();
 
-    public void visitNodes(BasicTree tree, NodeVisitor visitor){
+    public void visitNodes(Tree tree, NodeVisitor visitor){
         queue.add(tree.getRoot());
         this.startVisiting(visitor);
     }
