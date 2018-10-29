@@ -6,17 +6,17 @@ import datatypes.structure.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicTreeNode<T> extends Node<T> {
-    private BasicTreeNode parent;
-    private List<BasicTreeNode> children;
+public class TreeNode<T> extends Node<T> {
+    private TreeNode parent;
+    private List<TreeNode> children;
 
-    public BasicTreeNode(T data, BasicTreeNode parent) {
+    public TreeNode(T data, TreeNode parent) {
         super(data);
         this.parent = parent;
         this.children = new ArrayList<>();
     }
 
-    public void addChild(BasicTreeNode child){
+    public void addChild(TreeNode child){
         this.children.add(child);
     }
 
@@ -24,11 +24,11 @@ public class BasicTreeNode<T> extends Node<T> {
         return parent == null;
     }
 
-    public BasicTreeNode getParent() {
+    public TreeNode getParent() {
         return parent;
     }
 
-    public List<BasicTreeNode> getChildren() {
+    public List<TreeNode> getChildren() {
         return children;
     }
 
@@ -36,10 +36,10 @@ public class BasicTreeNode<T> extends Node<T> {
         return this.children.isEmpty();
     }
 
-    public Boolean isAncestor(BasicTreeNode ancestor) {
+    public Boolean isAncestor(TreeNode ancestor) {
         if (ancestor.isRoot())
             return true;
-        BasicTreeNode currentNode = this;
+        TreeNode currentNode = this;
         while (!currentNode.isRoot()) {
             if (currentNode == ancestor)
                 return true;

@@ -2,7 +2,7 @@ package xml;
 
 import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 import xml.tree.XmlTreeNodeData;
 import xml.tree.XmlTreeNodeVisitor;
@@ -40,7 +40,7 @@ public class XmlGenerator {
     private void updateHeights(BasicTree tree) {
         TreeDfsExecutor dfsExecutor = new TreeDfsExecutor();
         dfsExecutor.visitNodes(tree, node -> {
-            BasicTreeNode treeNode = (BasicTreeNode) node;
+            TreeNode treeNode = (TreeNode) node;
             XmlTreeNodeData data = (XmlTreeNodeData) treeNode.getData();
             if (treeNode.isRoot())
                 data.setHeight(0);

@@ -2,7 +2,7 @@ package json;
 
 
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -16,7 +16,7 @@ public class JsonParser {
 
         BasicTree tree = new BasicTree();
 
-        BasicTreeNode<String> root = new BasicTreeNode<>("root", null);
+        TreeNode<String> root = new TreeNode<>("root", null);
         tree.addNode(root);
 
         parseObject(obj, root, tree);
@@ -24,7 +24,7 @@ public class JsonParser {
         return tree;
     }
 
-    private void parseObject(JSONObject object, BasicTreeNode parent, BasicTree tree) {
+    private void parseObject(JSONObject object, TreeNode parent, BasicTree tree) {
         object.keySet().forEach(
                 key -> {
                     Object value = object.get(key);
@@ -32,20 +32,20 @@ public class JsonParser {
                     if(value instanceof JSONObject){
                         JSONObject childObject = object.getJSONObject(key);
 
-                        BasicTreeNode<String> node = new BasicTreeNode<>(key, parent);
+                        TreeNode<String> node = new TreeNode<>(key, parent);
                         tree.addNode(node);
 
                         parseObject(childObject, node, tree);
                     }
 
                     if(value instanceof String){
-                        BasicTreeNode<JsonNodeData> leaf = new BasicTreeNode<>(new JsonNodeData(key, value), parent);
+                        TreeNode<JsonNodeData> leaf = new TreeNode<>(new JsonNodeData(key, value), parent);
                         tree.addNode(leaf);
                     }
 
                     if(value instanceof JSONArray){
                         JSONArray array = (JSONArray) value;
-                        BasicTreeNode<JsonNodeData> leaf = new BasicTreeNode<>(new JsonNodeData(key, array.toList()), parent);
+                        TreeNode<JsonNodeData> leaf = new TreeNode<>(new JsonNodeData(key, array.toList()), parent);
                         tree.addNode(leaf);
                     }
                 }

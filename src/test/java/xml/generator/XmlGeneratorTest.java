@@ -1,7 +1,7 @@
 package xml.generator;
 
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import org.junit.Before;
 import org.junit.Test;
 import xml.XmlGenerator;
@@ -37,11 +37,11 @@ public class XmlGeneratorTest {
         nodeData3.addAttribute("sadaf", "afce3qdedad");
         nodeData3.addAttribute("noway", ".");
 
-        BasicTreeNode<XmlTreeNodeData> root = new BasicTreeNode<>(rootData, null);
-        BasicTreeNode<XmlTreeNodeData> node1 = new BasicTreeNode<>(nodeData1, root);
-        BasicTreeNode<XmlTreeNodeData> node2 = new BasicTreeNode<>(nodeData2, node1);
-        BasicTreeNode<XmlTreeNodeData> node3 = new BasicTreeNode<>(nodeData3, node1);
-        BasicTreeNode<XmlTreeNodeData> node4 = new BasicTreeNode<>(nodeData4, root);
+        TreeNode<XmlTreeNodeData> root = new TreeNode<>(rootData, null);
+        TreeNode<XmlTreeNodeData> node1 = new TreeNode<>(nodeData1, root);
+        TreeNode<XmlTreeNodeData> node2 = new TreeNode<>(nodeData2, node1);
+        TreeNode<XmlTreeNodeData> node3 = new TreeNode<>(nodeData3, node1);
+        TreeNode<XmlTreeNodeData> node4 = new TreeNode<>(nodeData4, root);
 
         tree.addRoot(root);
         tree.addNode(node1);

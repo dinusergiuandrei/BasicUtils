@@ -8,9 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Strings {
-    public static String getStringFromLines(List<String> lines){
+    public static String getStringFromLines(List<String> lines, String lineSeparator){
         StringBuilder builder = new StringBuilder();
-        lines.forEach(builder::append);
+        lines.forEach(line -> builder.append(line).append(lineSeparator));
         return builder.toString();
     }
 
@@ -30,16 +30,5 @@ public class Strings {
             System.err.println("Source path does not point to a java file: " + sourcePath);
         }
         return null;
-    }
-
-    public static String getStringFromInputStream(InputStream ins) throws Exception {
-        StringBuilder s = new StringBuilder();
-        String line;
-        BufferedReader in = new BufferedReader(new InputStreamReader(ins));
-        while ((line = in.readLine()) != null) {
-            s.append(line);
-            s.append('\n');
-        }
-        return s.toString();
     }
 }

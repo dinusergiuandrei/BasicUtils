@@ -2,7 +2,7 @@ package xml.tree;
 
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.Node;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
@@ -10,7 +10,7 @@ import javax.xml.stream.XMLStreamWriter;
 public class XmlTreeNodeVisitor implements NodeVisitor {
     private XMLStreamWriter writer;
 
-    private BasicTreeNode lastNode;
+    private TreeNode lastNode;
 
     public XmlTreeNodeVisitor(XMLStreamWriter writer) {
         this.writer = writer;
@@ -20,7 +20,7 @@ public class XmlTreeNodeVisitor implements NodeVisitor {
     @Override
     public Object visitNode(Node node) {
         try {
-            BasicTreeNode treeNode = (BasicTreeNode) node;
+            TreeNode treeNode = (TreeNode) node;
             XmlTreeNodeData data = (XmlTreeNodeData) treeNode.getData();
 
             if (treeNode.isRoot()) {

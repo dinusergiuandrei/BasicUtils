@@ -4,16 +4,16 @@ import datatypes.operations.trees.traversals.TreeBfsExecutor;
 import datatypes.operations.visitors.NodeSearcher;
 
 public class BasicTree {
-    private BasicTreeNode root;
+    private TreeNode root;
 
     public BasicTree() {
     }
 
-    public void addRoot(BasicTreeNode root) {
+    public void addRoot(TreeNode root) {
         this.root = root;
     }
 
-    public Boolean addNode(BasicTreeNode newNode) {
+    public Boolean addNode(TreeNode newNode) {
         if (this.root == null && newNode != null && newNode.getParent() == null) {
             this.root = newNode;
             return true;
@@ -26,11 +26,11 @@ public class BasicTree {
         return false;
     }
 
-    public BasicTreeNode getRoot() {
+    public TreeNode getRoot() {
         return root;
     }
 
-    public Boolean containsNode(BasicTreeNode node) {
+    public Boolean containsNode(TreeNode node) {
         TreeBfsExecutor searchExecutor = new TreeBfsExecutor();
         NodeSearcher visitor = new NodeSearcher(node);
         searchExecutor.visitNodes(this, visitor);

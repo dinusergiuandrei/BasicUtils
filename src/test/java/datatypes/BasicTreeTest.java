@@ -1,7 +1,7 @@
 package datatypes;
 
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import org.junit.Test;
 
 public class BasicTreeTest {
@@ -9,12 +9,12 @@ public class BasicTreeTest {
     @Test
     public void treeTest(){
         BasicTree tree = new BasicTree();
-        BasicTreeNode<Integer> root = new BasicTreeNode<>(0, null);
+        TreeNode<Integer> root = new TreeNode<>(0, null);
 
-        BasicTreeNode<Integer> node1 = new BasicTreeNode<>(1, root);
-        BasicTreeNode<Integer> node2 = new BasicTreeNode<>(2, root);
-        BasicTreeNode<Integer> node3 = new BasicTreeNode<>(3, node1);
-        BasicTreeNode<Integer> node4 = new BasicTreeNode<>(4, root);
+        TreeNode<Integer> node1 = new TreeNode<>(1, root);
+        TreeNode<Integer> node2 = new TreeNode<>(2, root);
+        TreeNode<Integer> node3 = new TreeNode<>(3, node1);
+        TreeNode<Integer> node4 = new TreeNode<>(4, root);
 
         tree.addRoot(root);
         tree.addNode(node1);

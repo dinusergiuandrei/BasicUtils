@@ -6,7 +6,7 @@ import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.Node;
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import filemanager.FileManager;
 
 import java.io.IOException;
@@ -38,7 +38,7 @@ public class JsonWriter {
 
         @Override
         public Object visitNode(Node node) {
-            BasicTreeNode treeNode = (BasicTreeNode) node;
+            TreeNode treeNode = (TreeNode) node;
             if (treeNode.getData() instanceof JsonNodeData) { // leaf
                 JsonNodeData jsonNodeData = (JsonNodeData) treeNode.getData();
 

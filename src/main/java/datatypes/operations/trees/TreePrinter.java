@@ -4,7 +4,7 @@ import datatypes.operations.trees.traversals.TreeDfsExecutor;
 import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.Node;
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 
 import java.util.Stack;
 
@@ -20,11 +20,11 @@ public class TreePrinter {
 
     class TreePrinterVisitor implements NodeVisitor {
         private StringBuilder builder = new StringBuilder();
-        private Stack<BasicTreeNode> stack = new Stack<>();
+        private Stack<TreeNode> stack = new Stack<>();
 
         @Override
         public Object visitNode(Node node) {
-            BasicTreeNode treeNode = (BasicTreeNode) node;
+            TreeNode treeNode = (TreeNode) node;
             if(!stack.empty()) {
                 if (treeNode.getParent() == stack.peek()) {
                     stack.push(treeNode);

@@ -2,7 +2,7 @@ package xml;
 
 
 import datatypes.structure.trees.BasicTree;
-import datatypes.structure.trees.BasicTreeNode;
+import datatypes.structure.trees.TreeNode;
 import xml.tree.XmlTreeNodeData;
 
 import javax.xml.stream.XMLInputFactory;
@@ -23,7 +23,7 @@ public class XmlParser {
 
         BasicTree tree = new BasicTree();
 
-        Stack<BasicTreeNode> nodeStack = new Stack<>();
+        Stack<TreeNode> nodeStack = new Stack<>();
 
         while (reader.hasNext()) {
             reader.next();
@@ -34,12 +34,12 @@ public class XmlParser {
                 }
 //                data.setText(reader.getText());
 
-                BasicTreeNode lastNode;
+                TreeNode lastNode;
                 if(nodeStack.empty())
                     lastNode = null;
                 else lastNode = nodeStack.peek();
 
-                BasicTreeNode<XmlTreeNodeData> node = new BasicTreeNode<>(data, lastNode);
+                TreeNode<XmlTreeNodeData> node = new TreeNode<>(data, lastNode);
                 tree.addNode(node);
 
                 nodeStack.push(node);
