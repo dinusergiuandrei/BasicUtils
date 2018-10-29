@@ -16,11 +16,7 @@ public class TreeTest {
         TreeNode<Integer> node3 = new TreeNode<>(3, node1);
         TreeNode<Integer> node4 = new TreeNode<>(4, root);
 
-        tree.addRoot(root);
-        tree.addNode(node1);
-        tree.addNode(node2);
-        tree.addNode(node3);
-        tree.addNode(node4);
+        tree.setRoot(root);
 
         System.out.println("dsad");
     }

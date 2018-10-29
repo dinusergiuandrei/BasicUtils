@@ -4,7 +4,8 @@ import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.trees.BinaryTree;
 import datatypes.structure.trees.BinaryTreeNode;
 
-public class PreOrderSearchExecutor {
+public class InOrderTraversalExecutor {
+
     public void visitNodes(BinaryTree tree, NodeVisitor visitor) {
         this.startVisiting(tree.getRoot(), visitor);
     }
@@ -12,9 +13,9 @@ public class PreOrderSearchExecutor {
     private void startVisiting(BinaryTreeNode node, NodeVisitor visitor) {
         BinaryTreeNode leftChild = node.getLeftChild();
         BinaryTreeNode rightChild = node.getRightChild();
-        visitor.visitNode(node);
         if (leftChild != null)
             startVisiting(leftChild, visitor);
+        visitor.visitNode(node);
         if (rightChild != null)
             startVisiting(rightChild, visitor);
     }

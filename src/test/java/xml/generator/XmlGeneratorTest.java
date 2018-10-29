@@ -43,11 +43,7 @@ public class XmlGeneratorTest {
         TreeNode<XmlTreeNodeData> node3 = new TreeNode<>(nodeData3, node1);
         TreeNode<XmlTreeNodeData> node4 = new TreeNode<>(nodeData4, root);
 
-        tree.addRoot(root);
-        tree.addNode(node1);
-        tree.addNode(node2);
-        tree.addNode(node3);
-        tree.addNode(node4);
+        tree.setRoot(root);
     }
 
     @Test

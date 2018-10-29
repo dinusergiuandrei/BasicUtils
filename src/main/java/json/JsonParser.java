@@ -17,7 +17,6 @@ public class JsonParser {
         Tree tree = new Tree();
 
         TreeNode<String> root = new TreeNode<>("root", null);
-        tree.addNode(root);
 
         parseObject(obj, root, tree);
 
@@ -33,20 +32,17 @@ public class JsonParser {
                         JSONObject childObject = object.getJSONObject(key);
 
                         TreeNode<String> node = new TreeNode<>(key, parent);
-                        tree.addNode(node);
 
                         parseObject(childObject, node, tree);
                     }
 
                     if(value instanceof String){
                         TreeNode<JsonNodeData> leaf = new TreeNode<>(new JsonNodeData(key, value), parent);
-                        tree.addNode(leaf);
                     }
 
                     if(value instanceof JSONArray){
                         JSONArray array = (JSONArray) value;
                         TreeNode<JsonNodeData> leaf = new TreeNode<>(new JsonNodeData(key, array.toList()), parent);
-                        tree.addNode(leaf);
                     }
                 }
         );

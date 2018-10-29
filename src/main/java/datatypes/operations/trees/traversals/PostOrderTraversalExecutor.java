@@ -4,7 +4,7 @@ import datatypes.operations.visitors.NodeVisitor;
 import datatypes.structure.trees.BinaryTree;
 import datatypes.structure.trees.BinaryTreeNode;
 
-public class PostOrderSearchExecutor {
+public class PostOrderTraversalExecutor {
     public void visitNodes(BinaryTree tree, NodeVisitor visitor) {
         this.startVisiting(tree.getRoot(), visitor);
     }

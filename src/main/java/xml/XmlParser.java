@@ -40,7 +40,6 @@ public class XmlParser {
                 else lastNode = nodeStack.peek();
 
                 TreeNode<XmlTreeNodeData> node = new TreeNode<>(data, lastNode);
-                tree.addNode(node);
 
                 nodeStack.push(node);
             }

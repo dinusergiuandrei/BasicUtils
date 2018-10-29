@@ -8,19 +8,29 @@ import java.util.List;
 
 public class TreeNode<T> extends Node<T> {
     private TreeNode parent;
-    List<TreeNode> children;
+    protected List<TreeNode<T>> children = new ArrayList<>();
 
-    public TreeNode(T data, TreeNode parent) {
+    public TreeNode(T data) {
         super(data);
-        this.parent = parent;
-        this.children = new ArrayList<>();
     }
 
-    public void addChild(TreeNode child){
+    public TreeNode(T data, TreeNode<T> parent) {
+        super(data);
+        this.setParent(parent);
+    }
+
+    public void setParent(TreeNode<T> parent) {
+        this.parent = parent;
+        if (this.parent != null && !this.parent.getChildren().contains(this)) {
+            this.parent.addChild(this);
+        }
+    }
+
+    public void addChild(TreeNode<T> child) {
         this.children.add(child);
     }
 
-    public Boolean isRoot(){
+    public Boolean isRoot() {
         return parent == null;
     }
 
@@ -28,23 +38,11 @@ public class TreeNode<T> extends Node<T> {
         return parent;
     }
 
-    public List<TreeNode> getChildren() {
+    public List<TreeNode<T>> getChildren() {
         return children;
     }
 
-    public Boolean isLeaf(){
+    public Boolean isLeaf() {
         return this.children.isEmpty();
-    }
-
-    public Boolean isAncestor(TreeNode ancestor) {
-        if (ancestor.isRoot())
-            return true;
-        TreeNode currentNode = this;
-        while (!currentNode.isRoot()) {
-            if (currentNode == ancestor)
-                return true;
-            currentNode = currentNode.getParent();
-        }
-        return false;
     }
 }
